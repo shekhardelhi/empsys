@@ -31,7 +31,7 @@ public class EmployeeController {
         return employeeService.createEmployee(employee);
     }
 
-    @GetMapping("/employees")
+    @GetMapping("/employee")
     public List<Employee> getAllEmployees() {
         return  employeeService.getAllEmployees();
     }
