@@ -1,0 +1,25 @@
+version: "3"
+services:
+  my_db3:
+    image: mysql:latest
+    ports:
+    - 3309:3306
+    environment:
+    - MYSQL_DATABASE=mydatabase
+    - MYSQL_ROOT_PASSWORD=root
+    volumes:
+    - /dbvolume :/var/lib/mysql
+  empsysnew:
+    build:
+      context: './'
+      dockerfile: Dockerfile
+    ports:
+    - "8085:8085"
+    environment:
+    - SPRING_DATASOURCE_USERNAME:root
+    - SPRING_DATASOURCE_PASSWORD:root
+    depends_on:
+    - my_db3
+    restart: on-failure
+    
+    
