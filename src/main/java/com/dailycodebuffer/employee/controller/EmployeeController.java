@@ -13,7 +13,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@CrossOrigin(origins = "http://http://mybucketboot2.s3-website-us-east-1.amazonaws.com//")
+//@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://mybucketbootapp3.s3-website-us-east-1.amazonaws.com")
 @RestController
 @RequestMapping("/api/v1/")
 @Data
